@@ -4,7 +4,7 @@ Baixe vídeos de redes sociais colando um link. App desktop para Windows, com mo
 
 ## Instalar
 
-Gere o instalador uma vez:
+Baixe na aba [Releases](https://github.com/Henriquehoff4/fita/releases). Para gerar os arquivos você mesmo:
 
 ```
 npm install
