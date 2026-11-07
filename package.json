@@ -1,0 +1,67 @@
+{
+  "name": "fita",
+  "productName": "Fita",
+  "version": "1.0.0",
+  "description": "Baixe vídeos de redes sociais colando um link",
+  "author": "Henrique Hoffmann",
+  "private": true,
+  "license": "MIT",
+  "main": "dist-electron/main/main.js",
+  "scripts": {
+    "dev:ui": "vite --mode mock",
+    "build:main": "tsc -p tsconfig.electron.json",
+    "build:ui": "vite build",
+    "build": "npm run build:main && npm run build:ui",
+    "start": "npm run build && electron .",
+    "typecheck": "tsc -p tsconfig.electron.json --noEmit && tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:e2e": "npm run build && node tests/e2e/run.mjs",
+    "dist": "npm run build && electron-builder --win nsis portable"
+  },
+  "build": {
+    "appId": "app.fita.desktop",
+    "productName": "Fita",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**",
+      "dist-electron/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "signAndEditExecutable": true
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false
+    },
+    "portable": {
+      "artifactName": "Fita-${version}-portatil.exe"
+    }
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^45.2.1",
+    "electron-builder": "^26.18.0",
+    "playwright-core": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}
