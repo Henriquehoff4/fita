@@ -2,6 +2,16 @@
 
 Baixe vídeos de redes sociais colando um link. App desktop para Windows, com modo simples e avançado, fila, histórico e atualização do yt-dlp com um clique.
 
+## Capturas de tela
+
+![Tela de download no modo simples, com a fila ao lado](docs/screenshots/baixar.png)
+
+![Modo avançado, com resolução, codecs e bitrate](docs/screenshots/avancado.png)
+
+![Histórico de downloads](docs/screenshots/historico.png)
+
+Imagens feitas com dados de exemplo.
+
 ## Instalar
 
 Baixe na aba [Releases](https://github.com/Henriquehoff4/fita/releases). Para gerar os arquivos você mesmo:
