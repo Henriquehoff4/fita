@@ -13,7 +13,7 @@ npm run dist
 
 Em `release/` ficam dois arquivos:
 
-- `Fita Setup 1.0.0.exe`: instalador, cria atalho no menu Iniciar.
+- `Fita Setup 1.0.0.exe`: instalador, cria atalho no menu Iniciar (na aba Releases o GitHub mostra como `Fita.Setup.1.0.0.exe`).
 - `Fita-1.0.0-portatil.exe`: não instala nada, basta abrir.
 
 O Windows pode mostrar o aviso do SmartScreen porque o app não tem assinatura digital. Clique em "Mais informações" e depois em "Executar assim mesmo".
